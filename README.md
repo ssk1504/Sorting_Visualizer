@@ -16,3 +16,36 @@ In this visualizer, Merge Sort shows smooth merging of sorted subarrays and perf
 ### 🔹 Quick Sort  
 Quick Sort is a highly efficient in-place divide-and-conquer sorting algorithm. It selects a pivot element, partitions the array around the pivot such that smaller elements go to the left and larger to the right, and then recursively sorts the partitions.  
 Although Quick Sort has a worst-case time complexity of O(n²), its average performance is O(n log n), and it typically outperforms other algorithms in practice. The visualizer shows how the array gets progressively divided and sorted around pivot positions.
+
+### ✅ Requirements  
+You need to have **SDL2** installed on your system to run the visualizer. For detecting memory management issues, install valgrind 
+To install SDL2 and valgrind on Ubuntu/Linux, run the following command:
+
+```bash
+sudo apt update  
+sudo apt install libsdl2-dev
+sudo apt install valgrind
+```
+
+---
+
+### ▶️ How to Run
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/ssk1504/Sorting_Visualizer.git  
+cd Sorting_Visualizer
+```
+
+2. **Compile the code**
+
+```bash
+g++ compare_sorts.cpp -g -o compare_sorts -pthread `sdl2-config --cflags --libs`
+```
+
+3. **Run the visualizer**
+
+```bash
+valgrind ./compare_sorts
+```
